@@ -1,0 +1,11 @@
+name: OtfegTeleports
+main: net.otfeg.teleports.Teleports
+version: 1.8.3
+
+commands:
+    back:
+       usage: /back  
+    spawn:
+    setspawn:
+    bed:
+    
