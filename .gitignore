@@ -9,6 +9,7 @@ gradle-app.setting
 !gradle-wrapper.jar
 
 *.class
+build.gradle~
 
 # Package Files #
 *.jar
