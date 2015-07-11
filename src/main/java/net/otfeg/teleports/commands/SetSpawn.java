@@ -1,5 +1,7 @@
 package net.otfeg.teleports.commands;
 
+import net.otfeg.teleports.Teleports;
+
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -7,6 +9,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class SetSpawn implements CommandExecutor{
+
+	public SetSpawn(Teleports teleports) {
+		teleports.getCommand("setspawn").setExecutor(this);
+	}
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label,
 			String[] args) {

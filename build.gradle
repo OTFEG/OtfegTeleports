@@ -8,7 +8,7 @@ group = 'net.otfeg.teleports'
 //the same as Maven artifactID. This will be used as base for jar name. Usually the same as plugin name
 archivesBaseName = 'OtfegTeleports'
 //Plugin version. "-SNAPSHOT" at the end is reserved for development versions.
-version = '1.8'
+version = '1.8.7'
 
 //If you set it to true it will not ask you to accept Minecraft eula. it will accept it autoomatically.
 //by changing it to true you accept Minecraft eula
@@ -18,7 +18,7 @@ final def EULA_ACCEPT = true
 final def JAVA_ARGS = ['-XX:MaxPermSize=256m']
 final def MAX_HEAP_SIZE = '1024M'
 final def BUKKIT_ARGS = []
-final def BUKKIT_VERSION = '1.8.3-R0.1-SNAPSHOT'
+final def BUKKIT_VERSION = '1.8.7-R0.1-SNAPSHOT'
 
 //Leave empty to use Netbeans output windows on linux
 final def LINUX_TERMINAL_COMMAND = ''

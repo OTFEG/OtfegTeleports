@@ -11,9 +11,10 @@ public class Teleports extends JavaPlugin {
 	public void onEnable() {
 		this.logger = this.getLogger();
 		new Spawn(this);
-		getCommand("setspawn").setExecutor(new SetSpawn());
+		new SetSpawn(this);
 		new Bed(this);
 		new Back(this);
+		//new TelportRequest(this);
 		saveDefaultConfig();   	
 	}
 	

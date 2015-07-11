@@ -1,6 +1,7 @@
 package net.otfeg.teleports.commands;
 
 import java.util.HashMap;
+
 import net.otfeg.teleports.TeleportDelay;
 import net.otfeg.teleports.Teleports;
 
@@ -11,6 +12,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerTeleportEvent;
 
 public class Back implements Listener, CommandExecutor{
@@ -25,10 +27,15 @@ public class Back implements Listener, CommandExecutor{
 	}
 	@EventHandler
 	public void PlayerTeleport(PlayerTeleportEvent event) {
-		lastlocation.put(event.getPlayer(), event.getFrom());
+		if(event.getPlayer().hasPermission("teleport.back"))
+			lastlocation.put(event.getPlayer(), event.getFrom());
 		
 	}
-	
+	@EventHandler
+	public void PlayerDeath(PlayerDeathEvent event) {
+		if(event.getEntity().hasPermission("teleport.backondeath")) 
+			lastlocation.put(event.getEntity(), event.getEntity().getLocation());
+	}
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label,
 			String[] args) {
